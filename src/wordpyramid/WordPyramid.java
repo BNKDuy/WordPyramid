@@ -1,21 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package wordpyramid;
 
-/**
- *
- * @author khuon
- */
+import java.util.Scanner;
+
 public class WordPyramid {
 
-    /**
-     * @param args the command line arguments
-     */
+    public static void Pyramid(String in)
+    {
+        if (in.length() == 1)
+        {
+            System.out.println(in);
+        }
+        else if (in.length() != 1 && in.length() != 0)
+        {
+            System.out.println(in);
+            Pyramid(in.substring(1, in.length() - 1));
+        }
+    }
+
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        String in;
+
+        System.out.println("Enter your word:");
+        in = input.nextLine();
+
+        Pyramid(in);
     }
     
 }
