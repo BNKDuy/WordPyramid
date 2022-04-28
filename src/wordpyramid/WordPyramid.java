@@ -6,8 +6,8 @@ public class WordPyramid {
 
     public static void Pyramid(String in)
     {
-        if (in.length() == 1) System.out.println(in);
-        else if (in.length() != 1 && in.length() != 0)
+        if (in.length() <= 1) System.out.println(in);
+        else
         {
             System.out.println(in);
             Pyramid(in.substring(1, in.length() - 1));
